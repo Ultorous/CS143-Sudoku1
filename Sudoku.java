@@ -2,11 +2,12 @@ import java.util.*;
 import java.io.*;
 
 public class Sudoku{
-   char[][] board = new char[9][9];
-   String placeHolder = "";
+   protected char[][] board;
    
-   
+   //Constructor
    public Sudoku(String fileName) {
+       board = new char[9][9];
+   
        try {
            Scanner file = new Scanner(new File(fileName));
            int row = 0;
@@ -23,7 +24,7 @@ public class Sudoku{
    }
    }
    
-   
+   //toString method
    public String toString(){
        StringBuilder sb = new StringBuilder("");
        for(int r = 0; r < board.length; r++){
